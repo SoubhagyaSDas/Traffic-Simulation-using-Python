@@ -38,6 +38,9 @@ class Car(Vehicle):
     def decelerate(self, secondsDelta):
         self.setCurrentSpeed(self.currentSpeed - Constants.DecRate * secondsDelta * Constants.MpsToMph)
 
+    def getCurrentSpeed(self):
+        return self.currentSpeed
+
 class Truck(Vehicle):
     def __init__(self):
         super().__init__()
@@ -57,3 +60,6 @@ class Truck(Vehicle):
 
     def setLoadWeight(self, weight):
         self.loadWeight = weight
+
+    def getCurrentSpeed(self):
+        return self.currentSpeed
