@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from constants import Constants
+from Constants import Constants
 from vehicle import Vehicle  # If the Vehicle class is needed for type annotations
 
 class ISimOutput(ABC):

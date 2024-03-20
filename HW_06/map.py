@@ -5,6 +5,6 @@ class Map:
     def add_road(self, road):
         self.roads.append(road)
 
-    def print(self, pd, o):
+    def print(self, print_driver, obj):
         for road in self.roads:
-            road.print(pd, o)
+            road.print(print_driver, obj)
