@@ -1,0 +1,2 @@
+class RoadItem:
+    pass
