@@ -1,3 +1,6 @@
+from road_item import RoadItem
+
+
 class DynamicRoadItem(RoadItem):
     pass
 
