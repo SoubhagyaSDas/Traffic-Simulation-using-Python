@@ -6,8 +6,12 @@ from Constants import Constants
 from road import Heading  # Assuming use of numpy for multidimensional arrays
 
 class CharMatrix:
-    def __init__(self, char_map_size):
-        self.map = np.full((char_map_size, char_map_size), ' ', dtype=str)
+    def __init__(self, size=Constants.CharMapSize):
+        self.size = size
+        self.map = [[' ' for _ in range(size)] for _ in range(size)]
+    def clear(self):
+            
+            self.map = [[' ' for _ in range(self.size)] for _ in range(self.size)]
 
 class IPrintDriver(ABC):
     @abstractmethod
