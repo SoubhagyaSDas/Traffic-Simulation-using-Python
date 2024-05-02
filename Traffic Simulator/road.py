@@ -1,10 +1,12 @@
 from enum import Enum
+from dynamic_road_item import DynamicRoadItem
 
 class Heading(Enum):
     North = 0
     South = 1
     East = 2
     West = 3
+
 class Road:
     def __init__(self, name, locx, locy, length, heading):
         self.name = name
@@ -12,10 +14,7 @@ class Road:
         self.locy = locy
         self.length = length
         self.heading = heading
-        self.traffic_lights = []
-
-    def add_traffic_light(self, traffic_light):
-        self.traffic_lights.append(traffic_light)
+        self.road_items = []
 
     def get_x_location(self):
         return self.locx
@@ -29,7 +28,11 @@ class Road:
     def get_heading(self):
         return self.heading
 
+    def add_road_item(self, road_item):
+        self.road_items.append(road_item)
+
     def print(self, pd, obj):
         pd.print_road(self, obj)
-        for tl in self.traffic_lights:
-            tl.print(pd, obj)  # Change this line to use TrafficLight's method
+
+        for item in self.road_items:
+            item.print_road_item(obj)
