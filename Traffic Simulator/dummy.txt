@@ -1,0 +1,5 @@
+echo "Some content" >> dummy.txt
+git add dummy.txt
+GIT_AUTHOR_DATE="Fri Dec 16 14:00 2023 +0100" \
+GIT_COMMITTER_DATE="Fri Dec 16 14:00 2023 +0100" \
+git commit -m "Backdated commit"
